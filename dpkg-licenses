@@ -64,7 +64,7 @@ COLUMNS=2000 dpkg -l | grep '^.[iufhwt]' | while read pState package pVer pArch 
     license=$(echo "$license" | tr '\n' ' ' | sed -r -e 's/ +/ /g' -e 's/^ +//' -e 's/ +$//')
     [ -z "$license" ] || break
   done
-  [ -n "$license" ] || license='unknown'
+  [ -n "$license" ] || license="Custom $package License"
 
   if [[ $CSV -eq 1 ]]
   then
