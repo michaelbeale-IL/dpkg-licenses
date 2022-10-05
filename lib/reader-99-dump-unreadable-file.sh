@@ -34,6 +34,8 @@ else
   exit 0  # no copyright file found
 fi
 
+# write the file out for review
+echo $copyrightfile > "./custom_licenses/$package-CustomLicense.txt"
 #echo "$copyrightfile" >&2
 #head -n1 "$copyrightfile" >&2
 
